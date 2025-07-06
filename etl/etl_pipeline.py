@@ -7,7 +7,7 @@ USERNAME, PASSWORD, DATABASE, PORT, HOST = "add_yours"
 # Extract data
 df = pd.read_csv("data/supermarket_sales.csv")
 
-# connect to default 'postgres' database to create a new one
+# connect to default database to create a new one
 engine = create_engine(f'postgresql+psycopg2://{USERNAME}:{PASSWORD}@localhost:5432/{"default_database_name"}')
 
 # create the database
