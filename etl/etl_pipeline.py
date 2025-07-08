@@ -8,7 +8,7 @@ USERNAME, PASSWORD, DATABASE, PORT, HOST = "add_yours"
 df = pd.read_csv("data/supermarket_sales.csv")
 
 # connect to default database to create a new one
-engine = create_engine(f'postgresql+psycopg2://{USERNAME}:{PASSWORD}@localhost:5432/{"default_database_name"}')
+engine = create_engine(f'postgresql+psycopg2://{USERNAME}:{PASSWORD}@{HOST}:{PORT}/{"default_database_name"}')
 
 # create the database
 try:
@@ -76,7 +76,7 @@ df_selected.columns = ['invoice_id', 'branch', 'customer_type', 'gender', 'produ
 
 
 # ---------------load into PostgreSQL-------------
-connection_string = f'postgresql+psycopg2://{USERNAME}:{PASSWORD}@localhost:5432/{DATABASE}'
+connection_string = f'postgresql+psycopg2://{USERNAME}:{PASSWORD}@{HOST}:{PORT}/{DATABASE}'
 engine = create_engine(connection_string)
 
 df_selected.to_sql('sales', con=engine, if_exists='append', index=False)
