@@ -4,20 +4,6 @@ This project demonstrates a simple yet effective **ETL (Extract, Transform, Load
 
 ---
 
-## 📁 Project Structure
-
-```
-ETL-CSV-to-PostgreSQL/
-│
-├── etl_pipeline.ipynb      # Main Jupyter notebook to run the ETL
-├── .env                    # Environment variables (ignored in version control)
-├── .gitignore              # Git ignore rules
-├── requirements.txt        # Python dependencies
-└── README.md               # Project documentation
-```
-
----
-
 ## 🚀 Features
 
 - Read CSV using `pandas`
